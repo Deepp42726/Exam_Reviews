@@ -30,6 +30,12 @@
             </intent-filter>
         </receiver>
 
+        <!-- ✅ Foreground Service for Habit Timer -->
+        <service
+            android:name=".HabitTimerService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
     </application>
 
 </manifest>
