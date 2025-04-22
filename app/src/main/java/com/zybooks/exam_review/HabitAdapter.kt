@@ -1,5 +1,6 @@
 package com.zybooks.exam_review
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ class HabitAdapter : ListAdapter<Habit, HabitAdapter.HabitViewHolder>(DIFF_CALLB
             override fun areItemsTheSame(oldItem: Habit, newItem: Habit) =
                 oldItem.name == newItem.name
 
+            @SuppressLint("DiffUtilEquals")
             override fun areContentsTheSame(oldItem: Habit, newItem: Habit) =
                 oldItem == newItem
         }
